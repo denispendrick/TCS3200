@@ -1,0 +1,14 @@
+# Build output
+build/
+*.o
+*.elf
+*.hex
+*.map
+*.cof
+
+# MPLAB X project scratch
+*.X/dist/
+*.X/build/
+*.X/debug/
+*.X/disassembly/
+nbproject/private/
