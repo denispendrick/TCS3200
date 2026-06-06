@@ -6,6 +6,9 @@ colour-to-frequency sensor and a dsPIC33 microcontroller, by two-colour
 
 > **Full write-up** — principle, configuration, circuit diagram, algorithm and
 > the complete program — is in **[docs/REPORT.md](docs/REPORT.md)**.
+>
+> Mounting the sensor for hot work and shielding it from the heat:
+> **[docs/sensor-mounting.md](docs/sensor-mounting.md)**.
 
 ## Important: the TCS3200 does not sense temperature
 
