@@ -38,22 +38,48 @@ Heat gets to the sensor three ways: radiation (the glow and its IR), convection
 (hot air, smoke), and conduction (through the mount). The barrier has to stop heat
 while still letting light through. Stack it like this:
 
-**A heat shield with a peephole.** The main barrier is a plate of polished
-aluminium or stainless between the source and the sensor, with a small hole
-drilled on the line of sight. The shiny face reflects most of the radiant heat
-away; the hole lets the sensor see the target. Mount it a little in front of the
-sensor with an air gap, so it doesn't just conduct back whatever it soaks up.
+**A heat shield with a peephole.** The main barrier is a polished metal plate
+between the source and the sensor, with a small hole drilled on the line of sight.
+The shiny face reflects most of the radiant heat away; the hole lets the sensor
+see the target. Mount it a little in front of the sensor with an air gap, so it
+doesn't just conduct back whatever it soaks up. What to make it from, in order of
+how hard you're pushing it:
+
+- **Polished aluminium** — the best reflector (emissivity ~0.04), cheap, light, and
+  conducts heat well so it's easy to cool. Soft, though, melts near 660 °C, and
+  dulls as it oxidizes — use it when the shield itself stays well under ~400 °C,
+  and re-polish if it clouds.
+- **Polished stainless (304/316)** — the default for closer or hotter work. Good to
+  ~800 °C, shrugs off oxidation and spatter, still reflective when polished.
+  Heavier, and conducts less.
+- **Nickel- or chrome-plated copper** — for a water-cooled shield: copper moves the
+  heat, the bright plating keeps emissivity low and resists oxidation.
+
+Finish matters as much as the metal — keep the hot side mirror-bright (a dull or
+sooty face absorbs heat instead of reflecting it), and leave the back dull or
+finned so it can shed whatever soaks in. For really brutal heat, several thin
+polished sheets with air gaps beat one thick plate.
 
 **A window over the lens.** Behind that aperture, put a heat-resistant window so
-hot gas, smoke, and spatter can't reach the sensor. Skip plain plastic and
-ordinary glass — they melt or crack from thermal shock. Reasonable picks:
+hot gas, smoke, and spatter can't reach the sensor. It has to do four things at
+once: pass the light the sensor reads (visible and near-IR), survive thermal
+shock, take the heat, and resist spatter. Picks, coolest to hottest:
 
-- **Borosilicate (Pyrex)** — cheap, good to ~450 °C, passes visible and near-IR.
-  Fine for most work.
-- **Fused quartz** — takes much higher temperatures and handles thermal shock;
-  reach for it on hotter or closer jobs.
-- **Sapphire** — tough and basically spatter-proof, the one to use if molten metal
-  might fly. Pricier.
+- **Borosilicate (Pyrex)** — passes visible + NIR, low expansion so it handles
+  thermal shock, good to ~450 °C continuous. Cheap and everywhere (lab sight
+  glass). Fine default.
+- **Fused quartz / fused silica** — near-zero expansion, takes ~1000 °C and hard
+  thermal shock, broad transmission. The standard pyrometer window; reach for it
+  when the glass runs hot or sits close.
+- **Sapphire** — extremely hard and basically spatter-proof, good past 1500 °C,
+  transmits visible–NIR. The one for molten metal or anything abrasive. Expensive
+  and harder to source.
+
+Steer clear of ordinary window/soda-lime glass (cracks from thermal shock), any
+plastic (melts), and IR-only optics like germanium or ZnSe — those are opaque to
+visible light, so they'd blind a colour sensor. A couple of mm thick is plenty,
+and don't clamp the glass hard against metal: give it a thin ceramic-fibre or
+graphite gasket and a little radial room so expansion doesn't crack it.
 
 One catch: any window tints the light a bit. Since we calibrate anyway, just
 calibrate with the window in place and it washes out. Same goes if you add an
